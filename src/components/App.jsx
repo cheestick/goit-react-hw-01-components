@@ -1,5 +1,5 @@
 import Profile from './Profile';
-import s from './App.module.css';
+import './App.module.css';
 import user from '../fetched-data/user.json';
 
 export const App = () => {
