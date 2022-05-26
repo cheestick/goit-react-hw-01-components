@@ -1,3 +1,73 @@
 .profile {
-    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    font-family: Helvetica, sans-serif;
+    font-size: 0.5em;
+    border-radius: 5px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    row-gap: 15px;
+}
+
+.description img {
+    width: 50%;
+    margin: 0 0 20px 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 4px solid rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.name {
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.tag, 
+.location {
+    font-weight: 400;
+    color: rgb(130, 130, 130)
+}
+
+.stats {
+    display: flex;
+    width: 100%;
+    background-color: rgb(241, 240, 240);
+    border-top: 2px solid rgb(218, 218, 218);
+}
+
+.stats li {
+    display: flex;
+    flex-grow: 1;
+    width: 33.33%;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 6px;
+    padding: 20px 0;
+}
+
+.stats li:not(:last-child) {
+    border-right: 2px solid rgb(218, 218, 218);
+}
+
+.label {
+    font-size: 0.8em;
+    color: rgb(130, 130, 130)
+}
+
+.quantity {
+    font-size: 0.9em;
+    font-weight: 700;
+    text-align: center;
 }

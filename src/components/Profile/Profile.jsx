@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-// import s from 'components/Profile/Profile.module.css';
+import s from 'components/Profile/Profile.module.css';
 
 const defaultImage = 'https://cdn-icons-png.flaticon.com/512/1077/1077012.png';
 
@@ -12,30 +12,30 @@ function Profile(props) {
     stats: { followers, views, likes },
   } = props;
   return (
-    <div className="profile">
-      <div className="description">
+    <div className={s.profile}>
+      <div className={s.description}>
         <img
           src={avatar || defaultImage}
-          alt="User avatar"
+          alt={username + 'avatar'}
           className="avatar"
         />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
+        <p className={s.name}>{username}</p>
+        <p className={s.tag}>@{tag}</p>
+        <p className={s.location}>{location}</p>
       </div>
 
-      <ul className="stats">
+      <ul className={s.stats}>
         <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
+          <span className={s.label}>Followers</span>
+          <span className={s.quantity}>{followers.toLocaleString()}</span>
         </li>
         <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
+          <span className={s.label}>Views</span>
+          <span className={s.quantity}>{views.toLocaleString()}</span>
         </li>
         <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
+          <span className={s.label}>Likes</span>
+          <span className={s.quantity}>{likes.toLocaleString()}</span>
         </li>
       </ul>
     </div>
