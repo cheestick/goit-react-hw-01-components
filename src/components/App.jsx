@@ -1,9 +1,11 @@
 import './App.module.css';
+import Container from './Container';
 import Profile from './Profile';
 import Statistics from './Statistics';
+import FriendList from './FriendList';
 import user from '../fetched-data/user.json';
 import data from '../fetched-data/data.json';
-import Container from './Container';
+import friends from '../fetched-data/friends';
 
 export const App = () => {
   return (
@@ -32,6 +34,12 @@ export const App = () => {
         <Statistics title="Upload stats" stats={data} />
         <Statistics stats={data} />
       </Container>
+
+      <Container>
+        <FriendList friends={friends} />
+      </Container>
+
+      <Container></Container>
     </div>
   );
 };
