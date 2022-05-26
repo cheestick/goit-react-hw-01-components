@@ -1,6 +1,6 @@
 import Profile from './Profile';
+import s from './App.module.css';
 import user from '../fetched-data/user.json';
-console.log(user);
 
 export const App = () => {
   return (
